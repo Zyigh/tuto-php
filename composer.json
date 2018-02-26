@@ -1,0 +1,14 @@
+{
+    "name": "zyigh/tuto",
+    "description": "Tuto PHP",
+    "type": "tuto",
+    "require": {
+        "erusev/parsedown": "^1.6"
+    },
+    "authors": [
+        {
+            "name": "Hugo Medina",
+            "email": "hmedina.paris75@gmail.com"
+        }
+    ]
+}

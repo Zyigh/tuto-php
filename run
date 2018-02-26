@@ -1,0 +1,14 @@
+#!/bin/bash
+
+dirname=$(realpath `dirname $0`)
+entrypoint="$dirname"/public/
+
+if [ -z $1 ]; then
+    page="/"
+else
+    page=/"$1"
+fi
+
+# Port set à 7000 pour ne pas rentrer en conflit avec les cours
+open http://localhost:7000"$page"
+php -S localhost:7000 -t "$entrypoint"
