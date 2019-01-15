@@ -29,7 +29,6 @@ fromPhp()
         composer install --no-ansi --no-dev --no-interaction --no-progress --no-scripts --optimize-autoloader
     fi
 
-
     # Port set à 8088 par défaut pour ne pas rentrer en conflit avec les cours
     openOnBrowser
     php -S localhost:$port -t "$entrypoint"
