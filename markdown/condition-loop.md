@@ -493,7 +493,7 @@ Ce petit nouveau qui a fait son apparition n'est pas si folichon que ça. C'est 
 
 Arrivé à ce point, le mieux à faire est peut-être de tout relire depuis le début. En effet, on a fait le tour des bases de **PHP**. Le minimum à savoir parfaitement puisqu'il permet de pouvoir créer n'importe quel programme. Toute la programmation ne se résume qu'à des variables, des conditions et des boucles. C'est le minimum à savoir dans n'importe quel langage.
 
-Afin de mettre toutes ces bases en application, on va pouvoir l'exercice classique qui reprend tout ce qu'on a vu : [trier un tableau](/array-sort).
+Afin de mettre toutes ces bases en application, on va pouvoir se lancer dans les exercices classiques qui reprennnent tout ce qu'on a vu : [les algorithmes sur les tableaux](/array-algo).
 
 
 
