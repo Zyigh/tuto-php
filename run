@@ -1,14 +1,53 @@
 #!/bin/bash
 
-dirname=$(realpath `dirname $0`)
-entrypoint="$dirname"/public/
+dirname=$(dirname $0)
+cd $dirname
 
 if [ -z $1 ]; then
-    page="/"
+    port=8088
 else
-    page=/"$1"
+    port=$1
 fi
 
-# Port set à 7000 pour ne pas rentrer en conflit avec les cours
-open http://localhost:7000"$page"
-php -S localhost:7000 -t "$entrypoint"
+if [ -z $2 ]; then
+    page="/"
+else
+    page=/"$2"
+fi
+
+openOnBrowser()
+{
+    open http://localhost:$port"$page"
+}
+
+fromPhp()
+{
+    entrypoint="$dirname"/html/
+    if [ -d "$dirname"/vendor ]; then
+        echo Dependencies already installed
+    else
+        composer install --no-ansi --no-dev --no-interaction --no-progress --no-scripts --optimize-autoloader
+    fi
+
+
+    # Port set à 8088 par défaut pour ne pas rentrer en conflit avec les cours
+    openOnBrowser
+    php -S localhost:$port -t "$entrypoint"
+}
+
+fromDocker()
+{
+    docker build -t tuto .
+    docker stop TutoRunning || true
+    docker rm TutoRunning || true
+    openOnBrowser
+    docker run -it -p $port:80 --name TutoRunning tuto
+}
+
+if [ -x /usr/local/bin/docker ]; then
+    fromDocker
+else
+    fromPhp
+fi
+
+exit 0

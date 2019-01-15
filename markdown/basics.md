@@ -28,7 +28,8 @@ La version 7.0 pourrait suffir, mais risque de causer quelques bugs quand on typ
 
 La [documentation de ZSH](https://gist.github.com/derhuerst/12a1558a4b408b3b2b6e) vous explique comment installer ZSH avec [Homebrew](https://brew.sh/index_fr.html). [Plus d'infos ici !](https://developerjack.com/blog/2016/installing-php71-with-homebrew/)
 
-**NOTE : On peut prendre la 7.2.2 tant qu'on y est**
+**NOTE : On peut prendre la 7.2.3 tant qu'on y est**  
+**NOTE : installer coreutils !!! `brew install coreutils`**
 
 ## Les bases
 

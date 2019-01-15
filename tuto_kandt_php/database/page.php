@@ -19,7 +19,6 @@ function getPage($slug) : ?array
 
     $pdo = getPdo();
     $sql = "SELECT
-      `p`.`id`,
       `p`.`titre`,
       `p`.`description`,
       `p`.`label`,
