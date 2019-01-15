@@ -16,9 +16,10 @@ php -v
 ```
 qui devrait renvoyer quelque chose comme
 ```
-PHP 7.2.2 (cli) (built: Oct  6 2017 01:07:48) ( NTS )
-Copyright (c) 1997-2017 The PHP Group
-Zend Engine v3.1.0, Copyright (c) 1998-2017 Zend Technologies
+PHP 7.3.1 (cli) (built: Jan 10 2019 13:15:37) ( NTS )
+Copyright (c) 1997-2018 The PHP Group
+Zend Engine v3.3.1, Copyright (c) 1998-2018 Zend Technologies
+    with Zend OPcache v7.3.1, Copyright (c) 1999-2018, by Zend Technologies
 ```
 La version 7.1 de **PHP** nous permettra de pouvoir *"typer"* (autant que faire se peut...), ce qui sera un énorme gain de temps au niveau de la *documentation* et du *debugging*. Elle offre la possibilité du type **nullable**, type optionnel vachement stylé !
 
