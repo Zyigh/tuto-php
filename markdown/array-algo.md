@@ -59,12 +59,22 @@ TANT QUE Ce n'est pas fini, et que le nombre le plus petit possible n'est pas pl
 
 ```php
 $arr = [];
-$max = 100000;
+$max = 10000;
 for ($i = 0; $i <= $max; $i++) {
     $arr[] = $i;
 }
 $needle = rand(0, $max);
 // Your objective is to find $needle in $arr
+```
+
+#### Notes
+
+Attention, on se repère dans un tableau grâce aux index. On va donc comparer ce qu'il y a dans le tableau à l'index n avec la valeur de $needle. Ici les clés et les valeurs correspondent, ce n'est pas toujours le cas. Le code doit fonctionner aussi pour un tableau généré comme cela :
+
+```php
+ for ($i = 0; $i <= $max; $i++) {
+     $arr[$i] = rand($i, $i + 1);
+ }
 ```
 
 ## Trier un tableau
